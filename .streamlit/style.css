@@ -1,0 +1,64 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap');
+
+/* Main container styling */
+.main {
+    padding: 2rem;
+}
+
+/* Headers */
+h1, h2, h3 {
+    font-family: 'Inter', sans-serif;
+    font-weight: 600;
+    color: #1D1D1F;
+}
+
+/* Streamlit elements customization */
+.stButton > button {
+    background-color: #007AFF;
+    color: white;
+    border-radius: 8px;
+    border: none;
+    padding: 0.5rem 1rem;
+    font-weight: 500;
+    transition: all 0.3s ease;
+}
+
+.stButton > button:hover {
+    background-color: #0066CC;
+    transform: translateY(-1px);
+}
+
+/* Data frame styling */
+.dataframe {
+    border: none !important;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+    border-radius: 8px;
+}
+
+.dataframe th {
+    background-color: #f7f7f7;
+    font-weight: 500;
+    padding: 12px !important;
+}
+
+.dataframe td {
+    padding: 12px !important;
+}
+
+/* Loading animation */
+.stProgress > div > div > div > div {
+    background-color: #007AFF;
+}
+
+/* Filter container */
+.css-1d391kg {
+    background-color: #f7f7f7;
+    border-radius: 8px;
+    padding: 1rem;
+}
+
+/* Input fields */
+.stTextInput > div > div > input {
+    border-radius: 8px;
+    border: 1px solid #E5E5E5;
+}
