@@ -1,21 +1,30 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap');
 
-/* Main container styling */
+/* Base font override for all elements except code and pre blocks */
+body *:not(code):not(pre) {
+    font-family: 'Ubuntu Mono', monospace !important;
+}
+
+/* Global dark mode styling */
+body {
+    background-color: #121212;
+    color: #ffffff;
+}
+
 .main {
     padding: 2rem;
 }
 
-/* Headers */
+/* Headings */
 h1, h2, h3 {
-    font-family: 'Inter', sans-serif;
     font-weight: 600;
-    color: #1D1D1F;
+    color: #ffffff;
 }
 
-/* Streamlit elements customization */
+/* Button styling with purple accents */
 .stButton > button {
-    background-color: #007AFF;
-    color: white;
+    background-color: #6d4cba;
+    color: #ffffff;
     border-radius: 8px;
     border: none;
     padding: 0.5rem 1rem;
@@ -24,19 +33,21 @@ h1, h2, h3 {
 }
 
 .stButton > button:hover {
-    background-color: #0066CC;
+    background-color: #6d4cba;
     transform: translateY(-1px);
 }
 
 /* Data frame styling */
 .dataframe {
     border: none !important;
-    box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+    box-shadow: 0 1px 3px rgba(255,255,255,0.1);
     border-radius: 8px;
+    background-color: #1e1e1e;
+    color: #ffffff;
 }
 
 .dataframe th {
-    background-color: #f7f7f7;
+    background-color: #2a2a2a;
     font-weight: 500;
     padding: 12px !important;
 }
@@ -47,12 +58,12 @@ h1, h2, h3 {
 
 /* Loading animation */
 .stProgress > div > div > div > div {
-    background-color: #007AFF;
+    background-color: #6d4cba;
 }
 
 /* Filter container */
 .css-1d391kg {
-    background-color: #f7f7f7;
+    background-color: #2a2a2a;
     border-radius: 8px;
     padding: 1rem;
 }
@@ -60,5 +71,7 @@ h1, h2, h3 {
 /* Input fields */
 .stTextInput > div > div > input {
     border-radius: 8px;
-    border: 1px solid #E5E5E5;
+    border: 1px solid #444444;
+    background-color: #2a2a2a;
+    color: #ffffff;
 }
