@@ -1,3 +1,7 @@
+import os
+from dotenv import load_dotenv
+load_dotenv()  # automatically loads from a .env file in the current directory, if present
+
 import streamlit as st
 import pandas as pd
 from utils.github_handler import GitHubHandler
@@ -22,8 +26,15 @@ def main():
     # Sidebar for GitHub configuration
     with st.sidebar:
         st.header("GitHub Configuration")
-        token = st.text_input("GitHub Personal Access Token", type="password")
-        repo_name = st.text_input("Repository Name (owner/repo)")
+        token = st.text_input(
+            "GitHub Personal Access Token", 
+            type="password", 
+            value=os.getenv("GITHUB_TOKEN", "")
+        )
+        repo_name = st.text_input(
+            "Repository Name (owner/repo)", 
+            value=os.getenv("REPO_NAME", "")
+        )
 
         if token and repo_name:
             github_handler = GitHubHandler(token)
